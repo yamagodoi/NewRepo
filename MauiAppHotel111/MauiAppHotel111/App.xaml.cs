@@ -1,5 +1,5 @@
-﻿
-using MauiAppHotel111.Models;
+﻿using MauiAppHotel111.Models;
+using MauiAppHotel111.Views;
 
 namespace MauiAppHotel111
 {
@@ -40,7 +40,7 @@ namespace MauiAppHotel111
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new Views.Contratacaodahospedagem());
+            MainPage = new NavigationPage(new Contratacaodahospedagem());
         }
 
         protected override Window CreateWindow(IActivationState? activationState)

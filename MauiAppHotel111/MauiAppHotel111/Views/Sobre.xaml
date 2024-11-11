@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiAppHotel111.Views.Sobre"
+             Title="Sobre"
+             BackgroundColor="{StaticResource Gray300}">
+    <VerticalStackLayout Padding="10" VerticalOptions="CenterAndExpand">
+        <Label Text="Sobre o Desenvolvedor"
+               FontSize="30"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource Primary}" />
+
+        <Label Text="Desenvolvedor: Kauã Yamazaki Godoi"
+               FontSize="20"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource Tertiary}" />
+
+        <Label Text="Ano de Desenvolvimento: 2024"
+               FontSize="20"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource Tertiary}" />
+
+        <Label Text="Link do GitHub:"
+               FontSize="20"
+               HorizontalOptions="Center"
+               TextColor="{StaticResource Tertiary}" />
+
+        <Label Text="https://github.com/yamagodoi/NewRepo.git"
+               FontSize="18"
+               TextColor="Blue"
+               HorizontalOptions="Center" />
+
+        <Button Text="Voltar"
+                Clicked="OnVoltarClicked"
+                HorizontalOptions="Center"
+                BackgroundColor="{StaticResource Primary}"
+                TextColor="White"/>
+    </VerticalStackLayout>
+</ContentPage>

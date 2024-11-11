@@ -74,6 +74,11 @@
                 </Frame>
 
                 <Button Text="Avançar"  Clicked="Button_Clicked" />
+                <Button Text="Sobre"
+                        Clicked="OnSobreClicked"
+                        HorizontalOptions="Center"
+                        BackgroundColor="{StaticResource Primary}"
+                        TextColor="White" />
 
             </VerticalStackLayout>
         </Frame>
