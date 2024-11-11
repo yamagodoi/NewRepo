@@ -1,55 +1,46 @@
-namespace MauiAppHotel111.Views;
+using Microsoft.Maui.Controls;
 
-public partial class Contratacaodahospedagem : ContentPage
+namespace MauiAppHotel111.Views
 {
-    App PropriedadesApp;
-
-    public Contratacaodahospedagem()
+    public partial class Contratacaodahospedagem : ContentPage
     {
-        InitializeComponent();
-
-        PropriedadesApp = (App)Application.Current;
-
-        pck_quarto.ItemsSource = PropriedadesApp.lista_quartos;
-
-        dtpck_checkin.MinimumDate = DateTime.Now;
-        dtpck_checkout.MaximumDate = new DateTime(DateTime.Now.Year, DateTime.Now.Month + 1, DateTime.Now.Day);
-
-        dtpck_checkout.MinimumDate = dtpck_checkin.Date.AddDays(1);
-        dtpck_checkout.MaximumDate = dtpck_checkin.Date.AddMonths(6);
-    }
-
-    private void Button_Clicked(object sender, EventArgs e)
-    {
-        try
+        public Contratacaodahospedagem()
         {
-            Navigation.PushAsync(new HospedagemContratada());
+            InitializeComponent();
         }
-        catch (Exception ex)
+
+        private void Button_Clicked(object sender, EventArgs e)
         {
-            DisplayAlert("Ops", ex.Message, "OK");
+            try
+            {
+                Navigation.PushAsync(new HospedagemContratada());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Ops", ex.Message, "OK");
+            }
         }
-    }
 
-    private void dtpck_checkin_DateSelected(object sender, DateChangedEventArgs e)
-    {
-        DatePicker elemento = sender as DatePicker;
-
-        DateTime data_selecionada_checkin = elemento.Date;
-
-        dtpck_checkout.MinimumDate = data_selecionada_checkin.AddDays(1);
-        dtpck_checkout.MaximumDate = data_selecionada_checkin.AddMonths(6);
-    }
-
-    private async void OnSobreClicked(object sender, EventArgs e)
-    {
-        try
+        private void dtpck_checkin_DateSelected(object sender, DateChangedEventArgs e)
         {
-            await Navigation.PushAsync(new Sobre());
+            DatePicker elemento = sender as DatePicker;
+            DateTime data_selecionada_checkin = elemento.Date;
+
+            dtpck_checkout.MinimumDate = data_selecionada_checkin.AddDays(1);
+            dtpck_checkout.MaximumDate = data_selecionada_checkin.AddMonths(6);
         }
-        catch (Exception ex)
+
+        private async void OnSobreClicked(object sender, EventArgs e)
         {
-            DisplayAlert("Erro", "Não foi possível abrir a página Sobre. " + ex.Message, "OK");
+            try
+            {
+                await Navigation.PushAsync(new Sobre());
+            }
+            catch (Exception ex)
+            {
+                DisplayAlert("Erro", "Não foi possível abrir a página Sobre. " + ex.Message, "OK");
+            }
         }
     }
 }
+

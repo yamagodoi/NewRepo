@@ -3,27 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiAppHotel111.Views.Sobre"
              Title="Sobre"
-             BackgroundColor="{StaticResource Gray300}">
+             BackgroundColor="{StaticResource BackgroundColor}">
     <VerticalStackLayout Padding="10" VerticalOptions="CenterAndExpand">
         <Label Text="Sobre o Desenvolvedor"
-               FontSize="30"
-               HorizontalOptions="Center"
-               TextColor="{StaticResource Primary}" />
+               Style="{StaticResource TitleStyle}" />
 
         <Label Text="Desenvolvedor: Kauã Yamazaki Godoi"
-               FontSize="20"
-               HorizontalOptions="Center"
-               TextColor="{StaticResource Tertiary}" />
+               Style="{StaticResource SubtitleStyle}" />
 
         <Label Text="Ano de Desenvolvimento: 2024"
-               FontSize="20"
-               HorizontalOptions="Center"
-               TextColor="{StaticResource Tertiary}" />
+               Style="{StaticResource SubtitleStyle}" />
 
         <Label Text="Link do GitHub:"
-               FontSize="20"
-               HorizontalOptions="Center"
-               TextColor="{StaticResource Tertiary}" />
+               Style="{StaticResource SubtitleStyle}" />
 
         <Label Text="https://github.com/yamagodoi/NewRepo.git"
                FontSize="18"
@@ -33,7 +25,6 @@
         <Button Text="Voltar"
                 Clicked="OnVoltarClicked"
                 HorizontalOptions="Center"
-                BackgroundColor="{StaticResource Primary}"
-                TextColor="White"/>
+                Style="{StaticResource ButtonStyle}" />
     </VerticalStackLayout>
 </ContentPage>

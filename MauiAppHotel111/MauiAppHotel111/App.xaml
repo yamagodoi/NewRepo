@@ -1,14 +1,40 @@
-﻿<?xml version = "1.0" encoding = "UTF-8" ?>
-<Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+﻿<?xml version="1.0" encoding="utf-8" ?>
+    <Application xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:MauiAppHotel111"
              x:Class="MauiAppHotel111.App">
-    <Application.Resources>
-        <ResourceDictionary>
-            <ResourceDictionary.MergedDictionaries>
-                <ResourceDictionary Source="Resources/Styles/Colors.xaml" />
-                <ResourceDictionary Source="Resources/Styles/Styles.xaml" />
-            </ResourceDictionary.MergedDictionaries>
-        </ResourceDictionary>
-    </Application.Resources>
-</Application>
+        <Application.Resources>
+            <ResourceDictionary>
+
+                <Color x:Key="PrimaryColor">#FF5722</Color>
+
+                <Color x:Key="SecondaryColor">#8E24AA</Color>
+
+                <Color x:Key="AccentColor">#FF9800</Color>
+
+                <Color x:Key="BackgroundColor">#263238</Color>
+ 
+
+                <Style x:Key="TitleStyle" TargetType="Label">
+                    <Setter Property="FontFamily" Value="Kalam"/>
+                    <Setter Property="FontSize" Value="40"/>
+                    <Setter Property="TextColor" Value="{StaticResource PrimaryColor}"/>
+                    <Setter Property="HorizontalOptions" Value="Center"/>
+                </Style>
+
+                <Style x:Key="SubtitleStyle" TargetType="Label">
+                    <Setter Property="FontFamily" Value="Kalam"/>
+                    <Setter Property="FontSize" Value="20"/>
+                    <Setter Property="TextColor" Value="{StaticResource SecondaryColor}"/>
+                    <Setter Property="HorizontalOptions" Value="Center"/>
+                </Style>
+
+                <Style x:Key="ButtonStyle" TargetType="Button">
+                    <Setter Property="BackgroundColor" Value="{StaticResource AccentColor}"/>
+                    <Setter Property="TextColor" Value="White"/>
+                    <Setter Property="FontFamily" Value="Kalam"/>
+                    <Setter Property="FontSize" Value="20"/>
+                </Style>
+            </ResourceDictionary>
+        </Application.Resources>
+    </Application>
